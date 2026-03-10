@@ -41,9 +41,9 @@ const Home = () => {
 
         <Link to='/signup'>
 
-        <button className="bg-blue-500 text-white px-4 rounded py-2">
-          Shop Now
-        </button>
+          <button className="bg-blue-500 text-white px-4 rounded py-2">
+            Shop Now
+          </button>
 
         </Link>
 
