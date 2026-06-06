@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* Global reset to remove text underlines from all headings */
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none !important;
+}
+
+/* Ensure React Router links (which render as anchors) do not enforce underlines on headings or text */
+a, a:hover {
+  text-decoration: none !important;
+}

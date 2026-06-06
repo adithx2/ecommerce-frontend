@@ -80,7 +80,6 @@ const Admin = () => {
         try {
 
             await deleteProduct(id);
-
             setProducts(products.filter((p) => p._id !== id));
 
         } catch (error) {
@@ -127,7 +126,7 @@ const Admin = () => {
 
     if (!user || user.role !== "admin") {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-center p-6">
+            <div className="min-h-screen fle flex-col items-center justify-center bg-gray-100 text-center p-6">
 
                 <h1 className="text-7xl font-bold text-red-500 mb-2">
                     404

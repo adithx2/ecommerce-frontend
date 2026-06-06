@@ -28,7 +28,7 @@ export const checkUser = async (data) => {
 
 export const deleteUser = async (id) => {
 
-    const response = await apiClient.put(`/users/${id}`,data)
+    const response = await apiClient.delete(`/users/${id}`,data)
           return response.data
 }
 
