@@ -40,7 +40,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          
+
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 font-black text-xl text-blue-900 tracking-tight hover:opacity-90 transition-opacity">
             <span>Shopif</span>
@@ -49,24 +49,22 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex md:items-center md:space-x-1 lg:space-x-2">
-            <Link 
-              to="/" 
-              className={`px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                location.pathname === "/" 
-                  ? "text-blue-600 bg-blue-50/60" 
-                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
-              }`}
+            <Link
+              to="/"
+              className={`px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${location.pathname === "/"
+                ? "text-blue-600 bg-blue-50/60"
+                : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                }`}
             >
               Home
             </Link>
 
-            <Link 
-              to="/products" 
-              className={`px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                location.pathname === "/products" 
-                  ? "text-blue-600 bg-blue-50/60" 
-                  : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
-              }`}
+            <Link
+              to="/products"
+              className={`px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${location.pathname === "/products"
+                ? "text-blue-600 bg-blue-50/60"
+                : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                }`}
             >
               Products
             </Link>
@@ -102,7 +100,7 @@ const Navbar = () => {
                 )}
               </Link>
             )}
-            
+
             {user ? (
               <div className="flex items-center space-x-3 border-l border-slate-100 pl-4 ml-2">
                 {user.role === "admin" ? (
@@ -184,7 +182,7 @@ const Navbar = () => {
             className="md:hidden bg-white border-b border-slate-100 overflow-hidden shadow-lg"
           >
             <div className="px-4 py-5 space-y-4">
-              
+
               {/* Search on mobile */}
               {location.pathname === "/products" && user && (
                 <form onSubmit={handleSearch} className="pb-1">
@@ -204,9 +202,8 @@ const Navbar = () => {
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className={`block px-3 py-2 rounded-xl text-base font-semibold ${
-                  location.pathname === "/" ? "text-blue-600 bg-blue-50/50" : "text-slate-600"
-                }`}
+                className={`block px-3 py-2 rounded-xl text-base font-semibold ${location.pathname === "/" ? "text-blue-600 bg-blue-50/50" : "text-slate-600"
+                  }`}
               >
                 Home
               </Link>
@@ -214,9 +211,8 @@ const Navbar = () => {
               <Link
                 to="/products"
                 onClick={() => setMenuOpen(false)}
-                className={`block px-3 py-2 rounded-xl text-base font-semibold ${
-                  location.pathname === "/products" ? "text-blue-600 bg-blue-50/50" : "text-slate-600"
-                }`}
+                className={`block px-3 py-2 rounded-xl text-base font-semibold ${location.pathname === "/products" ? "text-blue-600 bg-blue-50/50" : "text-slate-600"
+                  }`}
               >
                 Products
               </Link>
@@ -225,9 +221,8 @@ const Navbar = () => {
                 <Link
                   to="/cart"
                   onClick={() => setMenuOpen(false)}
-                  className={`flex items-center justify-between px-3 py-2 rounded-xl text-base font-semibold ${
-                    location.pathname === "/cart" ? "text-blue-600 bg-blue-50/50" : "text-slate-600"
-                  }`}
+                  className={`flex items-center justify-between px-3 py-2 rounded-xl text-base font-semibold ${location.pathname === "/cart" ? "text-blue-600 bg-blue-50/50" : "text-slate-600"
+                    }`}
                 >
                   <div className="flex items-center space-x-2">
                     <FiShoppingCart size={18} />
